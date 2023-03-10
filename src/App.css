@@ -1,7 +1,15 @@
 .App {
   text-align: center;
+  margin: 10%;
+  background-color: bisque;
+  padding: 2%;
+  border-radius: 3%;
 }
-
+.container{
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -11,6 +19,11 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.picture{
+  width: 20%;
+  border-radius: 5%;
 }
 
 .App-header {
@@ -27,12 +40,19 @@
 .App-link {
   color: #61dafb;
 }
+.intro{
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pages{
+ align-self: center;
+}
+
+.fade-in-image { animation: fadeIn 5s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
