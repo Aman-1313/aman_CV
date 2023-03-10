@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    --color-success: #3459e6;
+    --border-radius: 30px;
+}
+
+body {
+    font-family: 'Josefin Sans';
+    overflow-x: hidden;
+}
+.quotes {
+    border-left: 0.4em solid #3459e6;
+    line-height: 1.3em;
+    margin-bottom: 0em;
+    margin-top: 2em;
+    
+}
+.formDetails{
+    font-family: 'Josefin Sans';
+    /* margin-left: 30%;
+    margin-right: 30%; */
+    font-size: 14px;
+    text-align: left;
+}
+.submitbutton{
+    text-align: center;
+}
+.formDiv{  
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: var(--border-radius);
+ }
+.login-form{
+    padding: 10%;
+    background-color: white;
+}
+.logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+.display-5 {
+    line-height: 1.4;
+    margin-bottom: 0.7em;
+}
+.carasaul_container {
+   margin: 10%;
+   align-items: center;
+}
+#services img {
+    border-radius: var(--border-radius);
+    transition-duration: 0.3s;
+    border: 0px solid var(--color-success);
+}
+
+#services img:hover {
+    border-width: 5px;
+    border-radius: 50px;
+}
+#services img {
+    border-radius: var(--border-radius);
+    transition-duration: 0.3s;
+    border: 0px solid var(--color-success);
+}
+
+.analysis_input{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 50px;
+    padding: 2%;
+}
+
+.analysis{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.in-flex-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+}
+.btn {
+    animation-duration: 0.3s;
+}
+
+.btn:hover {
+    animation-name: zoom-animation;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav items hover state */
+a.nav-link.text-center.active {
+    transition-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+a.nav-link.text-center.active:hover {
+    background: var(--color-success);
+    color: #fff;
+    animation-name: zoom-animation;
+}
+
+@keyframes zoom-animation {
+  0%   {scale: 0.9;}
+  25%  {scale: 1;}
+  50%  {scale: 1.05;}
+  75%  {scale: 1.09;}
+  100% {scale: 1;}
+}
+
+.form-control:focus, .form-select:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 5%), 0 0 0 0.25rem #3459e670;
+}
+
+
+fieldset {
+    text-align: start;
+}
+
+.carousel ion-icon.md.icon-large.hydrated {
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 4px solid #3459e6;
+    color: #3459e6;
+}
+
+img {
+    border-radius: 30px;
+    transition: 0.4s all;
+}
+
+img:hover {
+    transform: scale(1.01);
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.article > * {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.article img {
+    width: 100%;
+}
+.article_img_div{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.carousel {
+    border-radius: 30px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #686e74;
+}
+
+.list-group-flush {
+    border-radius: 15px;
+}
+
+ion-icon {
+    margin-left: .25rem;
+}
+
+.list-group-item {
+    transition: 0.4s all;
+    border: 3px solid transparent;
+}
+
+.list-group-item:hover {
+    transform: scale(1.03);
+    border-radius: 50px;
+    border: 3px solid var(--color-success);
+    border-bottom: 5px solid var(--color-success);
+}
