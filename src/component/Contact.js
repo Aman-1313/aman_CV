@@ -26,7 +26,7 @@ export default function Contact() {
               <fieldset>
                 <input type="hidden" name="_captcha" value="false"/>               
                 <input type="hidden" name="_autoresponse" value="Thank you htmlFor your message. I will get back to you within 5 working days."/>
-
+                <h2 className='intro'>Contact me</h2>
                 <div className="form-group mt-4">
                   <input required="" type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
                 </div>

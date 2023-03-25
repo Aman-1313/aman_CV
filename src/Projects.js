@@ -22,13 +22,27 @@ function Projects() {
                 </div>
             </nav>
         </div>
-        <div className='pages'>
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-            </ul>
+        <div class="row row-lg-12">
+            <div class="col col-lg-4">
+                <ul class="list">
+                    <h2 className='intro'>Projects</h2>
+                    <li class="list-group-item mt-5">Abacus Analysis</li>
+                    <hr/>
+                    <li class="list-group-item">Amrit Bani</li>
+                    <hr/>
+                    <li class="list-group-item">LinkedIn Automation</li>
+                    <hr/>
+                    <li class="list-group-item">GitHub Bug Prediction</li>
+                </ul>
+            </div>
+            <div class="col col-lg-8">
+            <iframe style={{borderRadius:16}} src="https://abacusanalysis.ca" width="100%" height="100%">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+            </div>
         </div>
+       
+        
     </div>
     );
   }
