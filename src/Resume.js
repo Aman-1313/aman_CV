@@ -1,10 +1,12 @@
 import './App.css';
 import "./css/bootstrap.min.css";
-
-function Projects() {
+import resume from "./Aman P Singh - Resume.pdf"
+import {Document, Page} from 'react-pdf'
+import { pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+function Resume() {
     return (
-      <div class="container">
-        <div>
+        <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">Homepage</a>
@@ -21,15 +23,11 @@ function Projects() {
                     </div>
                 </div>
             </nav>
+            <Document className='pages' file={resume}>
+                <Page renderAnnotationLayer={false} renderTextLayer={false} pageIndex={0} />
+            </Document>
         </div>
-        <div className='pages'>
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-            </ul>
-        </div>
-    </div>
+        
     );
   }
-  export default Projects;
+  export default Resume;

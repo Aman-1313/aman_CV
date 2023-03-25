@@ -1,25 +1,24 @@
+
 .App {
   text-align: center;
-  margin: 10%;
-  background-color: bisque;
-  padding: 2%;
-  border-radius: 3%;
+  padding: 5%;
+  height: 100%;
+  margin: 5%;
+  border-radius: 16px;
 }
 .container{
   align-content: center;
   display: flex;
   flex-direction: column;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background: rgba(255,255,255,0.2);
+  padding: 2%;
+  border-radius: 16px;
+  color: #fff;
+  border: solid 1px rgba(255,255,255,0.3);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .picture{
   width: 20%;
@@ -42,17 +41,43 @@
 }
 .intro{
   margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
+  color: transparent;
+  font-family: studiofeixen,Arial,Helvetica,sans-serif;
+  letter-spacing: .05rem;
+  font-weight: 800;
+  -webkit-text-stroke: 2px #343333;
+  font-variation-settings: "wght" 800,"wdth" 100;
+  font-size: xx-large;
+  display:inline;
 
+}
+.intro2{
+  position: relative;
+  color: transparent;
+  font-family: Alkatra,Arial,Helvetica,sans-serif;
+  letter-spacing: .25rem;
+  color: #3e3c3c;
+  font-size: large;
+}
+.rotate{
+  animation: App-logo-spin  5s linear;
+}
 .pages{
- align-self: center;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
 }
 
-.fade-in-image { animation: fadeIn 5s; }
+.fade-in-image { animation: fadeIn 2s linear; width: 100%;}
 
 @keyframes fadeIn {
   0% { opacity: 0; }
-  100% { opacity: 1; }
+  100% { opacity: 1;}
+}
+.a {
+  font-size: 1.25rem;
+  color: #343333;
+  font-family: Pacifico,Arial,Helvetica,sans-serif;
+  text-transform: lowercase;
+  text-decoration: none;
 }
