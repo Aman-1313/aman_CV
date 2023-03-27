@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import './App.css';
-import "./css/bootstrap.min.css";
 function Projects() {
     const works = ['Abacus Analysis',
     'Amrit Bani',

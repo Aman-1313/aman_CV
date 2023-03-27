@@ -1,9 +1,10 @@
 import './App.css';
+import "./css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Homepage from './Homepage';
-import Projects from './Projects';
-import Resume from './Resume';
-import Report from './Report';
+import Projects from './component/Projects';
+import Resume from './component/Resume';
+import Report from './component/Report';
 import Contact from './component/Contact'
 import back from "./res/back.jpg"
 function App() {

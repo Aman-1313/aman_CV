@@ -1,6 +1,3 @@
-import { Link } from 'react-router-dom';
-import './App.css';
-import "./css/bootstrap.min.css";
 import logo from "./res/pic.JPG"
 import VanillaTilt from 'vanilla-tilt';
 import { useEffect, useRef } from 'react';
@@ -49,7 +46,6 @@ function Homepage() {
             <a className='a' href="/Projects">→ See my projects</a>
             <a className='a' href="/info">→ More about me</a>
         </Tilt>
-        
         </>
     );
   }

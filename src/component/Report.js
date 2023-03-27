@@ -1,6 +1,4 @@
-import './App.css';
-import "./css/bootstrap.min.css";
-import resume from "./final draft.pdf"
+import resume from "../final draft.pdf"
 import {Document, Page} from 'react-pdf'
 function Report() {
     return (

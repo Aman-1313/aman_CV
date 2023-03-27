@@ -1,6 +1,4 @@
-import './App.css';
-import "./css/bootstrap.min.css";
-import resume from "./Aman P Singh - Resume.pdf"
+import resume from "../Aman P Singh - Resume.pdf"
 import {Document, Page} from 'react-pdf'
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
@@ -23,9 +21,12 @@ function Resume() {
                     </div>
                 </div>
             </nav>
+            <div class="scroll">
             <Document className='pages' file={resume}>
                 <Page renderAnnotationLayer={false} renderTextLayer={false} pageIndex={0} />
             </Document>
+            </div>
+            
         </div>
         
     );
