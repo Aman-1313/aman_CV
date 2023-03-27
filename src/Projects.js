@@ -9,14 +9,14 @@ function Projects() {
     const worksmap = {
         'Abacus Analysis': "https://abacusanalysis.ca",
         'Amrit Bani':"https://play.google.com/store/apps/details?id=com.Amrit",
-        'LinkedIn Automation':"",
-        'GitHub Bug Prediction':""
+        'LinkedIn Automation':"https://github.com/Aman-1313/LinkedIn-Automation/blob/main/config.py",
+        'GitHub Bug Prediction':"/GitHub Prediction"
     };
     const worksimg = {
         'Abacus Analysis': '/abacus.png',
         'Amrit Bani': '/amrit.png',
         'LinkedIn Automation':"",
-        'GitHub Bug Prediction':""
+        'GitHub Bug Prediction':"/pred.png"
     };
       const [show, setShow] = useState("")
     return (
@@ -54,9 +54,12 @@ function Projects() {
                     </>)}
                 </ul>
             </div>
-            {show&&worksimg[show]!="" &&<><div class="col-12 col-md-8">
+            {show&&worksimg[show]!=="" &&<><div class="col-12 col-md-8">
             <img className='fade-in-image2' src={process.env.PUBLIC_URL + worksimg[show]} style={{width:"100%", height:"100%", borderRadius:16}}  alt="project" />
             
+            </div></>}
+            {show==="LinkedIn Automation"&&<><div class="col-12 col-md-8">
+            <iframe title ="giph" src="https://giphy.com/embed/Ux6LdUWKNW0eTEIlvL"  class="fade-in-image2" style={{width:"100%", height:"100%", borderRadius:16}}></iframe>
             </div></>}
             
         </div>
