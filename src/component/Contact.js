@@ -21,26 +21,23 @@ export default function Contact() {
         </nav>
         
         <div className="row justify-content-center">
-          <div className="col-12 col-md-8">
-            <form action="https://formsubmit.co/amansainigahonia@gmail.com" method="POST">
-              <fieldset>
-                <input type="hidden" name="_captcha" value="false"/>               
-                <input type="hidden" name="_autoresponse" value="Thank you htmlFor your message. I will get back to you within 5 working days."/>
-                <h2 className='intro'>Contact me</h2>
-                <div className="form-group mt-4">
-                  <input required="" type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                </div>
-                <div className="form-group mt-4">
-                  <input required="" type="text" name="_subject" className="form-control" id="subjectText" aria-describedby="emailHelp" placeholder="Enter message title" />
-                </div>
-                <div className="form-group mt-4">
-                  <textarea name="message" required="" placeholder="Enter your message" className="form-control" id="exampleTextarea" rows="3"></textarea>
-                </div>
-                <div className='d-flex justify-content-center'>
-                  <button type="submit" className="btn btn-primary mt-4 flex-center rounded-pill">Submit <ion-icon class="ms-1 md hydrated" name="chatbox-ellipses-outline" role="img" aria-label="chatbox ellipses outline"></ion-icon> </button>
-                </div>
-              </fieldset>
-            </form>
+        <h2 className='intro'>Contact me</h2>
+          <div className="col-6 ">
+          <hr/>
+            <p className='intro2'>MAIL</p>
+            <a className='a' href="mailto:aps6mtr@gmail.com">→ aps6mtr@gmail.com</a>
+          </div>
+          <div className="col-6 col-md-6 m-5">
+          <hr/>
+            <p className='intro2'>SOCIAL MEDIA</p>
+            <div className='row'>
+            <a className='a' href="https://www.instagram.com/a.gahonia/">→ instagram</a>
+            </div>
+            <div className='row'>
+            <a className='a' href="https://www.linkedin.com/in/aman-preet-singh-55b1871a6/">→ LinkedIn</a> 
+            </div>
+            
+            
           </div>
         </div>
       </div> 

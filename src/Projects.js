@@ -45,7 +45,7 @@ function Projects() {
                 <div className='container mb-5'><h2 className='list'>Projects</h2></div>
                     {works.map( work => 
                     <>
-                    <a class="nav-link" href= {worksmap[work]} >
+                    <a class="intro2" href= {worksmap[work]} >
                         <button type="button" onMouseLeave={()=>setShow("")} onMouseEnter={()=>setShow(work)}  class="btn">
                             <li class="list-group-item">{work}</li>
                         </button>
@@ -54,11 +54,9 @@ function Projects() {
                     </>)}
                 </ul>
             </div>
-            {show&&<><div class="col-12 col-md-8">
+            {show&&worksimg[show]!="" &&<><div class="col-12 col-md-8">
             <img className='fade-in-image2' src={process.env.PUBLIC_URL + worksimg[show]} style={{width:"100%", height:"100%", borderRadius:16}}  alt="project" />
-            {/* <iframe style={{borderRadius:16}} src={worksmap[show]} width="100%" height="100%">
-                <p>Your browser does not support iframes.</p>
-            </iframe> */}
+            
             </div></>}
             
         </div>
