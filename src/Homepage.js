@@ -44,7 +44,7 @@ function Homepage() {
             <p className='intro'> Hi there! I am Aman Singh </p> 
             <p className='intro2'> I’m a mobile application developer, data scientist & front-end web developer</p>
             <a className='a' href="/Projects">→ See my projects</a>
-            <a className='a' href="/info">→ More about me</a>
+            <a className='a' href="/Contact">→ More about me</a>
         </Tilt>
         </>
     );
