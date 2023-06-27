@@ -1,4 +1,4 @@
-import resume from "../Aman P Singh - Resume.pdf"
+import resume from "../Aman P Singh - CV.pdf"
 import {Document, Page} from 'react-pdf'
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
