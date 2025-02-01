@@ -1,69 +1,115 @@
 import { useState } from 'react';
+import { Helmet } from "react-helmet-async";
+import "./Projects.css"; // Updated styles for dark mode
+import VanillaTilt from 'vanilla-tilt';
+import { useEffect, useRef } from 'react';
+
+// Tilt Component for Effects
+function Tilt(props) {
+    const { options, ...rest } = props;
+    const tilt = useRef(null);
+
+    useEffect(() => {
+        VanillaTilt.init(tilt.current, options);
+    }, [options]);
+
+    return <div ref={tilt} {...rest} />;
+}
+
 function Projects() {
-    const works = ['Abacus Analysis',
-    'Amrit Bani',
-    'LinkedIn Automation',
-    'GitHub Bug Prediction'];
+    const options = {
+        scale: 1.1,
+        speed: 300,
+        max: 5
+    };
+
+    const works = [
+        'Abacus Analysis',
+        'Amrit Bani',
+        'LinkedIn Automation',
+        'GitHub Bug Prediction'
+    ];
+
     const worksmap = {
         'Abacus Analysis': "https://abacusanalysis.ca",
-        'Amrit Bani':"https://play.google.com/store/apps/details?id=com.Amrit",
-        'LinkedIn Automation':"https://github.com/Aman-1313/LinkedIn-Automation/blob/main/config.py",
-        'GitHub Bug Prediction':"/GitHub Prediction"
+        'Amrit Bani': "https://play.google.com/store/apps/details?id=com.Amrit",
+        'LinkedIn Automation': "https://github.com/Aman-1313/LinkedIn-Automation/blob/main/config.py",
+        'GitHub Bug Prediction': "/GitHub Prediction"
     };
+
     const worksimg = {
         'Abacus Analysis': '/abacus.png',
         'Amrit Bani': '/amrit.png',
-        'LinkedIn Automation':"",
-        'GitHub Bug Prediction':"/pred.png"
+        'LinkedIn Automation': "",
+        'GitHub Bug Prediction': "/pred.png"
     };
-      const [show, setShow] = useState("")
+
+    const [show, setShow] = useState("");
+
     return (
-      <div class="container">
-        <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/">Homepage</a>
-                    <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <>
+            {/* SEO Optimization */}
+            <Helmet>
+                <title>Aman Singh | Projects</title>
+                <meta name="description" content="Explore projects by Aman Singh, including Abacus Analysis, Amrit Bani, LinkedIn Automation, and GitHub Bug Prediction." />
+                <meta name="keywords" content="Aman Singh, projects, software development, data science, automation, mobile apps, GitHub Bug Prediction" />
+            </Helmet>
+
+            {/* Navbar */}
+            <nav className="navbar navbar-expand-lg navbar-dark">
+                <div className="container">
+                    <a className="navbar-brand" href="/">Aman Singh</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link" href='/Resume'>Resume</a>
-                            <a class="nav-link" href='https://github.com/Aman-1313'>GitHub</a>
-                            <a class="nav-link" href='/Projects'>Projects</a>
-                            <a class="nav-link" href='/Contact'>Contact</a>
-                        </div>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item"><a className="nav-link" href="https://github.com/Aman-1313" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li className="nav-item"><a className="nav-link active" href="/projects">Projects</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/contact">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
-        </div>
-        <div class="row">
-            <div class="col col-lg-4">
-                <ul>
-                <div className='container mb-5'><h2 className='list'>Projects</h2></div>
-                    {works.map( work => 
-                    <>
-                    <a class="intro2" href= {worksmap[work]} >
-                        <button type="button" onMouseLeave={()=>setShow("")} onMouseEnter={()=>setShow(work)}  class="btn">
-                            <li class="list-group-item">{work}</li>
-                        </button>
-                    </a>
-                    <hr/>
-                    </>)}
-                </ul>
-            </div>
-            {show&&worksimg[show]!=="" &&<><div class="col-12 col-md-8">
-            <img className='fade-in-image2' src={process.env.PUBLIC_URL + worksimg[show]} style={{width:"100%", height:"100%", borderRadius:16}}  alt="project" />
-            
-            </div></>}
-            {show==="LinkedIn Automation"&&<><div class="col-12 col-md-8">
-            <iframe title ="giph" src="https://giphy.com/embed/Ux6LdUWKNW0eTEIlvL"  class="fade-in-image2" style={{width:"100%", height:"100%", borderRadius:16}}></iframe>
-            </div></>}
-            
-        </div>
-       
-        
-    </div>
+
+            {/* Projects Section */}
+            <Tilt className="container my-5 p-4 tilt-effect" options={options}>
+                <h1 className="intro mt-3"><span className="highlight">My Projects</span></h1>
+                <div className="row mt-4">
+                    {/* Project List */}
+                    <div className="col-lg-4">
+                        <ul className="list-group">
+                            {works.map(work => (
+                                <li key={work} className="list-group-item project-item">
+                                    <a href={worksmap[work]} className="project-link"
+                                       onMouseEnter={() => setShow(work)} onMouseLeave={() => setShow("")}>
+                                        {work}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Project Preview */}
+                    <div className="col-lg-8">
+                        {show && worksimg[show] !== "" && (
+                            <div className="preview-container">
+                                <img src={process.env.PUBLIC_URL + worksimg[show]} className="preview-image" alt={show} />
+                            </div>
+                        )}
+
+                        {show === "LinkedIn Automation" && (
+                            <div className="preview-container">
+                                <iframe title="giph" src="https://giphy.com/embed/Ux6LdUWKNW0eTEIlvL"
+                                        className="preview-image" allowFullScreen></iframe>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </Tilt>
+        </>
     );
-  }
-  export default Projects;
+}
+
+export default Projects;

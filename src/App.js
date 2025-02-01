@@ -1,26 +1,36 @@
 import './App.css';
 import "./css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Homepage from './Homepage';
-import Projects from './component/Projects';
-import Resume from './component/Resume';
-import Report from './component/Report';
-import Contact from './component/Contact'
-import back from "./res/back.jpg"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider, Helmet } from "react-helmet-async";
+import { Suspense, lazy } from 'react';
+
+// Lazy-loaded components for performance
+const Homepage = lazy(() => import('./Homepage'));
+const Projects = lazy(() => import('./component/Projects'));
+const Report = lazy(() => import('./component/Report'));
+const Contact = lazy(() => import('./component/Contact'));
+
 function App() {
   return (
-    <div className="App" style={{backgroundImage: `url(${back})`,  }} >
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element = {<Homepage />}/>
-          <Route path='/Projects' element = {<Projects />}/>
-          <Route path='/Resume' element = {<Resume />}/>
-          <Route path='/Contact' element = {<Contact />}/>
-          <Route path='/GitHub Prediction' element = {<Report />}/>
-        </Routes>
-      </BrowserRouter>
-    </div>
-    
+    <HelmetProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Helmet>
+            <title>Aman Singh | Software Developer Portfolio</title>
+            <meta name="description" content="Explore Aman Singh's portfolio, projects, and reports. Connect with Aman for collaborations and tech insights." />
+          </Helmet>
+
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/github-prediction" element={<Report />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+      </div>
+    </HelmetProvider>
   );
 }
 
