@@ -3,23 +3,25 @@ import { Helmet } from "react-helmet-async";
 import "./Contact.css";
 import VanillaTilt from 'vanilla-tilt';
 import { useEffect, useRef } from 'react';
+
 function Tilt(props) {
-    const { options, ...rest } = props;
-    const tilt = useRef(null);
+  const { options, ...rest } = props;
+  const tilt = useRef(null);
 
-    useEffect(() => {
-        VanillaTilt.init(tilt.current, options);
-    }, [options]);
+  useEffect(() => {
+    VanillaTilt.init(tilt.current, options);
+  }, [options]);
 
-    return <div ref={tilt} {...rest} />;
+  return <div ref={tilt} {...rest} />;
 }
 
 export default function Contact() {
-    const options = {
-        scale: 1.1,
-        speed: 300,
-        max: 5
-    };
+  const options = {
+    scale: 1.1,
+    speed: 300,
+    max: 5
+  };
+
   return (
     <>
       {/* SEO Optimization */}
@@ -53,23 +55,31 @@ export default function Contact() {
         </script>
       </Helmet>
 
-        {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-dark">
-            <div className="container">
-                <a className="navbar-brand" href="/">Aman Singh</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto">
-                        <li className="nav-item"><a className="nav-link" href="https://github.com/Aman-1313" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                        <li className="nav-item"><a className="nav-link " href="/projects">Projects</a></li>
-                        <li className="nav-item"><a className="nav-link active" href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-dark">
+        <div className="container">
+          <a className="navbar-brand" href="/">Aman Singh</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="https://github.com/Aman-1313" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/projects">Projects</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
       {/* Contact Section */}
       <Tilt className="container text-center my-5 p-4 tilt-effect" options={options}>
@@ -78,25 +88,29 @@ export default function Contact() {
         {/* Email Section */}
         <div className="col-12">
           <hr />
-          <p className='intro2'>📧 EMAIL</p>
-          <a className='a' href="mailto:aps6mtr@gmail.com">→ aps6mtr@gmail.com</a>
+          <p className="intro2">📧 EMAIL</p>
+          <a className="a" href="mailto:aps6mtr@gmail.com">→ aps6mtr@gmail.com</a>
         </div>
 
         {/* Social Media Section */}
         <div className="col-12">
           <hr />
-          <p className='intro2'>📱 SOCIAL MEDIA</p>
-          <div className='row'>
-            <a className='a' href="https://www.instagram.com/a.gahonia/" target="_blank" rel="noopener noreferrer">→ Instagram</a>
+          <p className="intro2">📱 SOCIAL MEDIA</p>
+          <div className="row">
+            <a className="a" href="https://www.instagram.com/a.gahonia/" target="_blank" rel="noopener noreferrer">
+              → Instagram
+            </a>
           </div>
         </div>
 
         {/* Website Section */}
         <div className="col-12">
           <hr />
-          <p className='intro2'>🌍 MY WEBSITE</p>
-          <div className='row'>
-            <a className='a' href="https://fitealthy.com" target="_blank" rel="noopener noreferrer">→ Visit Fitealthy.com</a>
+          <p className="intro2">🌍 MY WEBSITE</p>
+          <div className="row">
+            <a className="a" href="https://fitealthy.com" target="_blank" rel="noopener noreferrer">
+              → Visit Fitealthy.com
+            </a>
           </div>
         </div>
       </Tilt>

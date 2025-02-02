@@ -1,107 +1,193 @@
-/* Dark Mode Background */
+/* Base Styles */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navbar */
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
+/* Minimalist Navbar */
+.navbar {
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
+}
 
 .navbar-brand {
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  text-decoration: none;
 }
 
 .navbar-toggler {
-    border: none;
+  border: none;
+  color: #e0e0e0;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1.5rem;
 }
 
 .navbar-nav .nav-link {
-    color: #ffffff;
-    transition: color 0.3s ease-in-out;
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #00ffcc;
+  color: #00ffcc;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.tilt-effect {
+  background-color: #121212;
+  border: none;
+  padding: 2rem;
+}
+
+.fade-in-image {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Profile Image */
 .profile-pic {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* Tilt Effect Container */
-.tilt-effect {
-    background: rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 8px 16px rgba(0, 255, 204, 0.2);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 /* Intro Text */
 .intro {
-    font-size: 2.2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
 }
 
 .intro2 {
-    font-size: 1.3rem;
-    color: #b0b0b0;
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 1rem;
 }
 
-/* Highlight Text */
 .highlight {
-    color: #00ffcc;
-    font-weight: bold;
+  color: #00ffcc;
 }
 
-/* Glassmorphic Buttons */
+/* Minimalist Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
 .btn-glass {
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 30px;
-    background: rgba(0, 255, 204, 0.1);
-    border: 1px solid #00ffcc;
-    color: #00ffcc;
-    transition: all 0.3s ease-in-out;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  background: none;
 }
 
 .btn-glass:hover {
-    background: #00ffcc;
-    color: #121212;
+  background: #00ffcc;
+  color: #121212;
 }
 
 .btn-outline-light {
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 30px;
-    border: 1px solid #e0e0e0;
-    color: #e0e0e0;
-    transition: all 0.3s ease-in-out;
+  border: 1px solid #e0e0e0;
+  color: #e0e0e0;
+  background: none;
 }
 
 .btn-outline-light:hover {
-    background: #e0e0e0;
-    color: #121212;
+  background: #e0e0e0;
+  color: #121212;
 }
 
-/* Image Fade-in */
-.fade-in-image {
-    animation: fadeIn 1.5s ease-in-out;
+/* Additional SEO Content */
+.seo-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.seo-content h2,
+.seo-content h3 {
+  color: #e0e0e0;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.seo-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 1rem;
+}
+
+/* Minimalist Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+/* Spacing Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+/* Remove Shadows */
+.shadow,
+.shadow-sm {
+  box-shadow: none !important;
 }

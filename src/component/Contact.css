@@ -1,75 +1,108 @@
-/* Global Dark Mode Styling */
-/* Dark Mode Background */
+/* Base Styles */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navbar */
-.
-/* Tilt Effect Container */
-.tilt-effect {
-    background: rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 8px 16px rgba(0, 255, 204, 0.2);
-}
-/* Highlight Text */
-.highlight {
-    color: #00ffcc;
-    font-weight: bold;
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Navbar */
+/* Minimalist Navbar */
 .navbar {
-    background: rgba(30, 30, 30, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
 }
 
 .navbar-brand {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.navbar-nav .nav-link {
-    color: #ffffff;
-    transition: color 0.3s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #00ffcc;
-}
-
-
-hr {
-  border-color: #444; /* Lighter borders */
-}
-
-.a {
-  color: #4db6ac;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e0e0e0;
   text-decoration: none;
 }
 
-.a:hover {
-  color: #80cbc4;
-  text-decoration: underline;
+.navbar-toggler {
+  border: none;
+  color: #e0e0e0;
 }
 
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ffcc;
+}
+
+/* Tilt Effect Container for Contact Section */
+.tilt-effect {
+  background-color: #121212;
+  border: none;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Headings & Text */
 .intro {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
+  margin: 1rem 0;
 }
 
 .intro2 {
-  font-size: 1.25rem;
-  color: #fff;
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 1rem;
 }
 
-h1, p {
-  color: white;
+.highlight {
+  color: #00ffcc;
+}
+
+/* Link Styling */
+.a {
+  color: #00ffcc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.a:hover {
+  color: #e0e0e0;
+}
+
+/* Horizontal Rule (Minimal) */
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 1rem 0;
+}
+
+/* Spacing Utility Classes */
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
 }
