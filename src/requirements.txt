@@ -3,5 +3,6 @@ Flask-Cors==3.0.10
 opencv-python-headless==4.7.0.72
 numpy==1.23.5
 Pillow==9.4.0
-rembg==2.0.31
-onnxruntime==1.14.1
+rembg==2.0.62
+onnxruntime==1.15.0
+gunicorn
