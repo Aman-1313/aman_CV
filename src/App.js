@@ -7,9 +7,8 @@ import { Suspense, lazy } from 'react';
 // Lazy-loaded components for performance
 const Homepage = lazy(() => import('./Homepage'));
 const Projects = lazy(() => import('./component/Projects'));
-const Report = lazy(() => import('./component/Report'));
 const Contact = lazy(() => import('./component/Contact'));
-
+const ImageResizer = lazy(() => import('./component/ImageResizer'));
 function App() {
   return (
     <HelmetProvider>
@@ -25,7 +24,7 @@ function App() {
               <Route path="/" element={<Homepage />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/github-prediction" element={<Report />} />
+              <Route path="/image-resizer" element={<ImageResizer />} />
             </Routes>
           </Suspense>
         </BrowserRouter>

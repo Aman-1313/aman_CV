@@ -78,6 +78,8 @@ function Homepage() {
                             <li className="nav-item"><a className="nav-link" href="https://github.com/Aman-1313" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                             <li className="nav-item"><a className="nav-link" href="/projects">Projects</a></li>
                             <li className="nav-item"><a className="nav-link" href="/contact">Contact</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/image-resizer">Image Resizer</a></li>
+
                         </ul>
                     </div>
                 </div>
