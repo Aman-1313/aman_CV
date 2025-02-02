@@ -31,7 +31,7 @@ const BackgroundRemover = () => {
       const base64Image = reader.result.split(",")[1];
 
       try {
-        const response = await fetch("https://aman-cv-cilz.onrender.com/remove-background", {
+        const response = await fetch("http://192.168.1.70:10000/remove-background", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ image: base64Image }),

@@ -199,7 +199,6 @@ function ImageResizer() {
           <ul>
             <li><strong>Images:</strong> (JPG, PNG, WebP) - Resized efficiently</li>
           </ul>
-          <a className="nav-link " href="/background-remover"> Background Remover</a>
         </div>
       </div>
     </>
