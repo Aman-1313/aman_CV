@@ -1,4 +1,4 @@
-
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import base64
@@ -20,7 +20,6 @@ def remove_background():
         # Decode the Base64 image data (without the header)
         image_data = base64.b64decode(data['image'])
         input_buffer = BytesIO(image_data)
-        # Open the image with Pillow and convert to RGBA
         input_image = Image.open(input_buffer).convert("RGBA")
 
         # Save the image to a byte buffer in PNG format
@@ -28,7 +27,7 @@ def remove_background():
         input_image.save(buffered_input, format="PNG")
         input_bytes = buffered_input.getvalue()
 
-        # Remove background using rembg (U^2-Net)
+        # Remove background using rembg
         output_bytes = remove(input_bytes)
 
         # Open the resulting image and convert to RGBA (for consistency)
@@ -44,4 +43,5 @@ def remove_background():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use the port provided by Render
+    app.run(host="0.0.0.0", port=port, threaded=True)
