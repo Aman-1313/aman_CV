@@ -97,19 +97,19 @@ function ImageResizer() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="https://github.com/Aman-1313" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              </li>
+
               <li className="nav-item">
                 <a className="nav-link" href="/projects">Projects</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/contact">Contact</a>
               </li>
+
               <li className="nav-item">
                 <a className="nav-link active" href="/image-resizer">Image Resizer</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/file-compressor">File Compressor</a>
               </li>
             </ul>
           </div>
@@ -188,7 +188,19 @@ function ImageResizer() {
               </div>
             </div>
           )}
-
+        {/* Info Section */}
+        <div className="info-section mt-4">
+          <h2 className="text-center"><span className="highlight">About This Tool</span></h2>
+          <p>
+            This Image resizer lets you change your image dimensions however you want while maintaining quality.
+            It supports multiple file formats.
+          </p>
+          <h3>Supported File Types</h3>
+          <ul>
+            <li><strong>Images:</strong> (JPG, PNG, WebP) - Resized efficiently</li>
+          </ul>
+          <a className="nav-link " href="/background-remover"> Background Remover</a>
+        </div>
       </div>
     </>
   );

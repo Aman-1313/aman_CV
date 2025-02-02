@@ -1,0 +1,125 @@
+/* Dark Mode Background */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00ffcc;
+}
+
+/* Profile Image */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Tilt Effect Container */
+.tilt-effect {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 255, 204, 0.2);
+}
+.dark-mode .form-control {
+  background-color: #2e2e2e; /* A dark background */
+  border: 1px solid #555;   /* Darker border */
+  color: #fff;              /* White text */
+  box-shadow: none;
+}
+
+.dark-mode .form-control:focus {
+  background-color: #2e2e2e;
+  border-color: #777;
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.dark-mode .form-label {
+  color: #ccc;  /* Light gray label text */
+}
+/* Intro Text */
+.intro {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.intro2 {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+}
+
+/* Highlight Text */
+.highlight {
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+/* Glassmorphic Buttons */
+.btn-glass {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: rgba(0, 255, 204, 0.1);
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-glass:hover {
+    background: #00ffcc;
+    color: #121212;
+}
+.info-section {
+     padding: 50px 54px;
+}
+.btn-outline-light {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: 1px solid #e0e0e0;
+    color: #e0e0e0;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+    background: #e0e0e0;
+    color: #121212;
+}
+
+/* Image Fade-in */
+.fade-in-image {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

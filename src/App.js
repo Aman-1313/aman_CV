@@ -8,7 +8,9 @@ import { Suspense, lazy } from 'react';
 const Homepage = lazy(() => import('./Homepage'));
 const Projects = lazy(() => import('./component/Projects'));
 const Contact = lazy(() => import('./component/Contact'));
+const FileCompressor = lazy(() => import('./component/FileCompressor'));
 const ImageResizer = lazy(() => import('./component/ImageResizer'));
+const BackgroundRemover = lazy(() => import('./component/BackgroundRemover'));
 function App() {
   return (
     <HelmetProvider>
@@ -25,6 +27,8 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/image-resizer" element={<ImageResizer />} />
+              <Route path="/file-compressor" element={<FileCompressor />} />
+              <Route path="/background-remover" element={<BackgroundRemover />} />
             </Routes>
           </Suspense>
         </BrowserRouter>

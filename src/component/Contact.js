@@ -65,16 +65,19 @@ export default function Contact() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
+
               <li className="nav-item">
-                <a className="nav-link" href="https://github.com/Aman-1313" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/projects">Projects</a>
+                <a className="nav-link " href="/projects">Projects</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link active" href="/contact">Contact</a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link " href="/image-resizer">Image Resizer</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/file-compressor">File Compressor</a>
               </li>
             </ul>
           </div>

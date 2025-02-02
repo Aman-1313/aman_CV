@@ -91,6 +91,9 @@ function Homepage() {
               <li className="nav-item">
                 <a className="nav-link" href="/image-resizer">Image Resizer</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/file-compressor">File Compressor</a>
+              </li>
             </ul>
           </div>
         </div>
