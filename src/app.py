@@ -5,7 +5,7 @@ import base64
 from io import BytesIO
 from PIL import Image
 import traceback
-from rembg import remove  # rembg performs background removal using a pretrained U^2-Net
+from rembg import remove
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -44,6 +44,6 @@ def remove_background():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    # Use environment variable PORT or default to 5000
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    # Get the PORT environment variable, default to 10000 if not set
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)  # Bind to 0.0.0.0 and the PORT environment variable
