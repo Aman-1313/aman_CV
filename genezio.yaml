@@ -1,0 +1,25 @@
+backend:
+    functions:
+        - entry: app.py
+          handler: app
+          name: flask
+          path: .
+          type: httpServer
+    language:
+        name: python
+        packageManager: pip
+    path: src
+frontend:
+    environment:
+        VITE_API_URL_FLASK: ${{ backend.functions.flask.url }}
+    path: .
+    publish: build
+    scripts:
+        build:
+            - npm run build
+        deploy:
+            - npm install
+    subdomain: aman
+name: aman
+region: us-east-1
+yamlVersion: 2
