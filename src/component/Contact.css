@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #ffffff;
+  color: #333333;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -16,21 +16,21 @@ body {
 
 /* Minimalist Navbar */
 .navbar {
-  background-color: #121212;
-  border-bottom: 1px solid #333;
+  background-color: #ffffff;
   padding: 1rem 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #e0e0e0;
+  color: #333333;
   text-decoration: none;
 }
 
 .navbar-toggler {
   border: none;
-  color: #e0e0e0;
+  color: #333333;
 }
 
 .navbar-nav {
@@ -45,18 +45,18 @@ body {
 }
 
 .navbar-nav .nav-link {
-  color: #e0e0e0;
+  color: #333333;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #00ffcc;
+  color: #007bff;
 }
 
 /* Tilt Effect Container for Contact Section */
 .tilt-effect {
-  background-color: #121212;
+  background-color: #ffffff;
   border: none;
   padding: 2rem;
   text-align: center;
@@ -71,29 +71,29 @@ body {
 
 .intro2 {
   font-size: 1rem;
-  color: #b0b0b0;
+  color: #666666;
   margin-bottom: 1rem;
 }
 
 .highlight {
-  color: #00ffcc;
+  color: #007bff;
 }
 
 /* Link Styling */
 .a {
-  color: #00ffcc;
+  color: #007bff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .a:hover {
-  color: #e0e0e0;
+  color: #0056b3;
 }
 
 /* Horizontal Rule (Minimal) */
 hr {
   border: none;
-  border-top: 1px solid #333;
+  border-top: 1px solid #dddddd;
   margin: 1rem 0;
 }
 

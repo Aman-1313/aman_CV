@@ -73,7 +73,7 @@ function Homepage() {
       </Helmet>
 
       {/* Minimalist Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark minimalist-navbar">
+      <nav className="navbar navbar-expand-lg minimalist-navbar">
         <div className="container">
           <a className="navbar-brand" href="/">Aman Singh</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

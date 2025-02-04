@@ -1,16 +1,14 @@
-/* Dark Mode Background */
+/* Light Mode Background */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #ffffff;
+    color: #333333;
     font-family: 'Poppins', sans-serif;
 }
 
 /* Navbar */
-
-
 .navbar-brand {
     font-weight: bold;
-    color: #ffffff;
+    color: #333333;
 }
 
 .navbar-toggler {
@@ -18,12 +16,12 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #333333;
     transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #00ffcc;
+    color: #007bff;
 }
 
 /* Profile Image */
@@ -36,29 +34,32 @@ body {
 
 /* Tilt Effect Container */
 .tilt-effect {
-    background: rgba(20, 20, 20, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 8px 16px rgba(0, 255, 204, 0.2);
-}
-.dark-mode .form-control {
-  background-color: #2e2e2e; /* A dark background */
-  border: 1px solid #555;   /* Darker border */
-  color: #fff;              /* White text */
-  box-shadow: none;
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
 }
 
-.dark-mode .form-control:focus {
-  background-color: #2e2e2e;
-  border-color: #777;
-  color: #fff;
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+/* Form Styles */
+.light-mode .form-control {
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #ccc;
+    color: #333;
+    box-shadow: none;
 }
 
-.dark-mode .form-label {
-  color: #ccc;  /* Light gray label text */
+.light-mode .form-control:focus {
+    background-color: #ffffff;
+    border-color: #007bff;
+    color: #333;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+.light-mode .form-label {
+    color: #555;
+}
+
 /* Intro Text */
 .intro {
     font-size: 2.2rem;
@@ -67,12 +68,12 @@ body {
 
 .intro2 {
     font-size: 1.3rem;
-    color: #b0b0b0;
+    color: #666666;
 }
 
 /* Highlight Text */
 .highlight {
-    color: #00ffcc;
+    color: #007bff;
     font-weight: bold;
 }
 
@@ -81,31 +82,34 @@ body {
     padding: 12px 24px;
     font-size: 1rem;
     border-radius: 30px;
-    background: rgba(0, 255, 204, 0.1);
-    border: 1px solid #00ffcc;
-    color: #00ffcc;
+    background: rgba(0, 123, 255, 0.1);
+    border: 1px solid #007bff;
+    color: #007bff;
     transition: all 0.3s ease-in-out;
 }
 
 .btn-glass:hover {
-    background: #00ffcc;
-    color: #121212;
+    background: #007bff;
+    color: #ffffff;
 }
+
 .info-section {
-     padding: 50px 54px;
+    padding: 50px 54px;
+    color: #000;
 }
+
 .btn-outline-light {
     padding: 12px 24px;
     font-size: 1rem;
     border-radius: 30px;
-    border: 1px solid #e0e0e0;
-    color: #e0e0e0;
+    border: 1px solid #333333;
+    color: #333333;
     transition: all 0.3s ease-in-out;
 }
 
 .btn-outline-light:hover {
-    background: #e0e0e0;
-    color: #121212;
+    background: #333333;
+    color: #ffffff;
 }
 
 /* Image Fade-in */
