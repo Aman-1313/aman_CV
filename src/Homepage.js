@@ -2,7 +2,6 @@ import logo from "./res/pic.JPG";
 import VanillaTilt from 'vanilla-tilt';
 import { useEffect, useRef } from 'react';
 import { Helmet } from "react-helmet-async";
-import "./Homepage.css"; // Dark mode & minimalist styles
 
 // Tilt Component for subtle effects
 function Tilt(props) {
@@ -73,7 +72,7 @@ function Homepage() {
       </Helmet>
 
       {/* Minimalist Navbar */}
-      <nav className="navbar navbar-expand-lg minimalist-navbar">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
           <a className="navbar-brand" href="/">Aman Singh</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -98,25 +97,23 @@ function Homepage() {
           </div>
         </div>
       </nav>
-
-      {/* Hero Section */}
-      <section className="hero minimal-hero">
-        <Tilt className="container text-center my-5 p-4 tilt-effect" options={options}>
-          <div className="fade-in-image">
-            <img src={logo} className="profile-pic shadow" alt="Aman Singh - Developer" />
-          </div>
-          <h1 className="intro mt-3">Hello, I'm <span className="highlight">Aman Singh</span></h1>
-          <p className="intro2">
-            I am a mobile and web developer, data scientist, and front-end expert dedicated to crafting innovative digital solutions.
-          </p>
-          <div className="mt-3">
+      <Tilt className="tilt-effect" options={options}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <div className="card" style={{ maxWidth: "20rem", textAlign: "center", padding: 20, }}>
+          <img src={logo} className="profile-pic shadow" alt="Aman Singh - Developer" />
+          <div className="card-body">
+            <h5 className="card-title">Hello, I'm <span className="highlight">Aman Singh</span></h5>
+            <p className="card-text">
+              I am a mobile and web developer, data scientist, and front-end expert dedicated to crafting innovative digital solutions.
+            </p>
             <a className="btn btn-glass shadow-sm" href="/projects">View Projects</a>
           </div>
-        </Tilt>
-      </section>
+        </div>
+      </div>
+      </Tilt>
 
       {/* Additional SEO Content */}
-      <section className="container my-5 seo-content">
+      <section className="container">
         <h2>About Aman Singh</h2>
         <p>
           Aman Singh is a seasoned mobile and web developer with extensive expertise in data science and front-end development. Focused on clean design and intuitive user experiences, Aman Singh combines technical skill with creative vision to deliver innovative digital solutions.

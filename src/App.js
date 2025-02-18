@@ -1,4 +1,3 @@
-import './App.css';
 import "./css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from "react-helmet-async";
